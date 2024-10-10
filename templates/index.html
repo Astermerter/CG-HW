@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer</title>
+</head>
+<body>
+    <h1>Image Resizer</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    
+    <form method="POST" enctype="multipart/form-data">
+        <label for="input_directory">Входная директория:</label>
+        <input type="text" id="input_directory" name="input_directory" placeholder="Enter the input directory path">
+        
+        <br><br>
+
+        <label for="output_directory">Выходная директория:</label>
+        <input type="text" id="output_directory" name="output_directory" placeholder="Enter the output directory path">
+        
+        <br><br>
+
+        <label for="edge_color">Цвет заливки по краям:</label>
+        <input type="color" id="edge_color" name="edge_color" value="#ffffff">
+
+
+        <br><br>
+        <h1>Изменения могу быть примененны только к тем изображениям, изменение разрешения которых не больше чем в 2 </h1>
+        
+        
+
+        <button type="submit">Изменить все изображения</button>
+    </form>
+</body>
+</html>
